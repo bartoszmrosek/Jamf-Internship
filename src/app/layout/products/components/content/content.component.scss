@@ -1,0 +1,87 @@
+.products-content {
+    display: block;
+
+    .products-header {
+        font-family: 'Antonio', sans-serif;
+        font-size: 4rem;
+        font-weight: 700;
+
+        margin-top: 0.5rem;
+
+        line-height: 112%;
+
+        letter-spacing: -0.02em;
+
+        width: 75%;
+
+        text-align: left;
+    }
+
+    .products-description {
+        width: 65%;
+        margin-top: 6.5rem;
+        padding: 1.5rem 0;
+
+        .products-summary {
+            font-weight: 400;
+            font-size: 1.125rem;
+            line-height: 156%;
+        }
+
+        .add-new-product {
+            background-color: #C4C4C4;
+
+            border: 0;
+
+            font-weight: 700;
+            font-size: 1.125rem;
+            line-height: 156%;
+            letter-spacing: -0.02em;
+
+            padding: 1rem 1.25rem;
+            margin-top: 3rem;
+        }
+    }
+
+    .devices {
+        margin-top: 5rem;
+
+        .devices-header {
+            font-size: 2rem;
+            line-height: 88%;
+            font-weight: 700;
+        }
+
+        .devices-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 1.375rem;
+
+            width: min-content;
+            margin-top: 3.375rem;
+
+            .devices-grid-item {
+                .devices-image {
+                    aspect-ratio: 1/1;
+                    width: 17.5rem;
+
+                    object-position: 50% 50%;
+                    background-size: contain;
+                    object-fit: cover;
+                }
+
+                .devices-header {
+                    font-weight: 400;
+                    font-size: 1.5rem;
+                    line-height: 140%;
+                }
+
+                .devices-price {
+                    @extend .devices-header;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

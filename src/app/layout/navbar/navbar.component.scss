@@ -4,6 +4,7 @@
 
     // Close equivalent to 9.75rem but better for responsivity
     padding: 0 9.7%;
+    margin-bottom: 6rem;
 
     .logo-wrapper {
         margin-right: auto;
@@ -28,6 +29,8 @@
 
         font-size: 1.25rem;
         font-weight: 700;
+
+        line-height: 140%;
 
         .plus-icon {
             aspect-ratio: 1/1;
