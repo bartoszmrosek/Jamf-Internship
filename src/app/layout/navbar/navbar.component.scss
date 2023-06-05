@@ -1,17 +1,15 @@
 .navigation {
-    --initialScale: 1;
     display: flex;
 
-    // Close equivalent to 9.75rem but better for responsivity
-    padding: 0 9.7%;
-    margin-bottom: 6rem;
+    padding: 0 4em;
+    margin-bottom: 6.5vh;
 
     .logo-wrapper {
         margin-right: auto;
 
         .logo {
             aspect-ratio: 151/142;
-            height: calc(8.875rem * var(--initialScale));
+            height: 8.875em;
 
             object-fit: cover;
         }
@@ -27,16 +25,22 @@
 
         background: inherit;
 
-        font-size: 1.25rem;
+        font-size: 1.25em;
         font-weight: 700;
 
         line-height: 140%;
 
         .plus-icon {
             aspect-ratio: 1/1;
-            height: calc(3.875rem * var(--initialScale));
+            height: 3.875em;
 
             object-fit: cover;
         }
+    }
+}
+
+@media only screen and (min-width: 425px) {
+    .navigation {
+        padding: 0 9.75em;
     }
 }

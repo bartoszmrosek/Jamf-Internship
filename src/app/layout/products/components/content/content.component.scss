@@ -3,7 +3,7 @@
 
     .products-header {
         font-family: 'Antonio', sans-serif;
-        font-size: 4rem;
+        font-size: 4em;
         font-weight: 700;
 
         margin-top: 0.5rem;
@@ -12,19 +12,19 @@
 
         letter-spacing: -0.02em;
 
-        width: 75%;
+        width: 90%;
 
         text-align: left;
     }
 
     .products-description {
         width: 65%;
-        margin-top: 6.5rem;
+        margin-top: 6.5em;
         padding: 1.5rem 0;
 
         .products-summary {
             font-weight: 400;
-            font-size: 1.125rem;
+            font-size: 1.125em;
             line-height: 156%;
         }
 
@@ -34,20 +34,27 @@
             border: 0;
 
             font-weight: 700;
-            font-size: 1.125rem;
+            font-size: 1.125em;
             line-height: 156%;
             letter-spacing: -0.02em;
 
-            padding: 1rem 1.25rem;
-            margin-top: 3rem;
+            padding: 1em 1.25em;
+            margin-top: 3em;
         }
     }
 
     .devices {
-        margin-top: 5rem;
+        margin: 5em 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        @media only screen and (min-width: 768px) {
+            align-items: flex-start;
+        }
 
         .devices-header {
-            font-size: 2rem;
+            font-size: 2em;
             line-height: 88%;
             font-weight: 700;
         }
@@ -56,15 +63,16 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
-            gap: 1.375rem;
+            gap: 1.375em;
 
             width: min-content;
-            margin-top: 3.375rem;
+            margin-top: 3.375em;
 
             .devices-grid-item {
                 .devices-image {
                     aspect-ratio: 1/1;
-                    width: 17.5rem;
+                    width: 18.5vw;
+                    min-width: 120px;
 
                     object-position: 50% 50%;
                     background-size: contain;
@@ -73,7 +81,7 @@
 
                 .devices-header {
                     font-weight: 400;
-                    font-size: 1.5rem;
+                    font-size: 1.5em;
                     line-height: 140%;
                 }
 

@@ -13,4 +13,41 @@ button {
 
 body {
     font-family: 'Open Sans', sans-serif;
+    font-size: 50%;
+}
+
+@media only screen and (min-width: 850px) {
+    body {
+        font-size: 60%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    body {
+        font-size: 65%;
+    }
+}
+
+@media only screen and (min-width: 1150px) {
+    body {
+        font-size: 75%;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    body {
+        font-size: 85%;
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    body {
+        font-size: 90%;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    body {
+        font-size: 100%;
+    }
 }
