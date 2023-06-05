@@ -1,21 +1,22 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { render, screen } from '@testing-library/angular';
 import { FeaturedImageComponent } from './featured-image.component';
 
 describe('FeaturedImageComponent', () => {
-  let component: FeaturedImageComponent;
-  let fixture: ComponentFixture<FeaturedImageComponent>;
-
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [FeaturedImageComponent]
-    });
-    fixture = TestBed.createComponent(FeaturedImageComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  const ALT = "Wyróżnione zdjęcie";
+  const SRC = "assets/featured-image.jfif";
+  beforeEach(async ()=>{
+    await render(FeaturedImageComponent, {
+      componentInputs: {
+        src: SRC,
+        alt: ALT
+      }
+    })
+  })
+  it("should have alt set properly", ()=>{
+    expect(screen.getByAltText(ALT)).toBeInTheDocument()
+  })
+  it("should have src set properly", ()=>{
+    expect(screen.getByRole("img")).toHaveAttribute("src", SRC);
+  })
 });
