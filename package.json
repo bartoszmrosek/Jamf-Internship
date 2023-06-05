@@ -1,6 +1,8 @@
 {
   "name": "jamf-ng",
   "version": "0.0.1",
+  "author": "Bartosz Mrosek",
+  "description": "Application in angular for Jamf Internship recruitment process",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

@@ -1,0 +1,39 @@
+.navigation {
+    --initialScale: 1;
+    display: flex;
+
+    // Close equivalent to 9.75rem but better for responsivity
+    padding: 0 9.7%;
+
+    .logo-wrapper {
+        margin-right: auto;
+
+        .logo {
+            aspect-ratio: 151/142;
+            height: calc(8.875rem * var(--initialScale));
+
+            object-fit: cover;
+        }
+    }
+
+    .new-product-opener {
+        display: inline-flex;
+        align-items: center;
+
+        margin-left: auto;
+
+        border: 0;
+
+        background: inherit;
+
+        font-size: 1.25rem;
+        font-weight: 700;
+
+        .plus-icon {
+            aspect-ratio: 1/1;
+            height: calc(3.875rem * var(--initialScale));
+
+            object-fit: cover;
+        }
+    }
+}
