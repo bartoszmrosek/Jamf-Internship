@@ -19,7 +19,7 @@
             <section *ngFor="let product of products$ | async" class="devices-grid-item">
                 <img [src]="product.imageUrl" [alt]="product.alt ?? '{{product.name}} zdjęcie poglądowe'"
                     class="devices-image" />
-                <h6 class="devices-header">{{product.name}}</h6>
+                <h4 class="devices-header">{{product.name}}</h4>
                 <span class="devices-price">{{(product.price).toFixed(2).replace(".", ",")}} zł</span>
             </section>
         </div>
