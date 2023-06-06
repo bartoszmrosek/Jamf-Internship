@@ -5,6 +5,7 @@ import { FeaturedImageComponent } from './components/featured-image/featured-ima
 import { ContentComponent } from './components/content/content.component';
 import { ProductsService } from '../../../app/services/products/products.service';
 import { AddingFormComponent } from './components/adding-form/adding-form.component';
+import { StyledBtnComponent } from '../../../app/shared/styled-btn/styled-btn.component';
 
 
 
@@ -13,7 +14,8 @@ import { AddingFormComponent } from './components/adding-form/adding-form.compon
     ProductsComponent,
     FeaturedImageComponent,
     ContentComponent,
-    AddingFormComponent
+    AddingFormComponent,
+    StyledBtnComponent
   ],
   imports: [
     CommonModule
