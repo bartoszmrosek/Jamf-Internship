@@ -9,6 +9,10 @@
 button {
     cursor: pointer;
     font-family: inherit;
+
+    &:active {
+        transform: scale(0.98);
+    }
 }
 
 body {

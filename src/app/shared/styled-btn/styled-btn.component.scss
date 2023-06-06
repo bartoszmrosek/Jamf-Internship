@@ -9,4 +9,8 @@
     letter-spacing: -0.02em;
 
     padding: calc(0.75em * var(--sizeScale)) calc(1.25em * var(--sizeScale));
+
+    &:hover {
+        filter: brightness(0.9);
+    }
 }
