@@ -6,7 +6,8 @@ export const INITIAL_PRODUCTS: readonly Product[] = [
   {
     name: "MacBook Air 13”",
     price: 4999.00,
-    imageUrl: "assets/device-1.jfif"
+    imageUrl: "assets/device-1.jfif",
+    alt: "Najnowszy MacBook Air 13”"
   },
   {
     name: "iMac 27”",

@@ -16,8 +16,8 @@
             Urządzenia Apple
         </h3>
         <div class="devices-grid">
-            <section *ngFor="let product of products$ | async" class="devices-grid-item">
-                <img [src]="product.imageUrl" [alt]="product.alt ?? '{{product.name}} zdjęcie poglądowe'"
+            <section *ngFor="let product of products$ | async" class="devices-grid-item" data-testid="products-section">
+                <img [src]="product.imageUrl" [alt]="product.alt ?? 'Zdjęcie poglądowe produktu'"
                     class="devices-image" />
                 <h4 class="devices-header">{{product.name}}</h4>
                 <span class="devices-price">{{(product.price).toFixed(2).replace(".", ",")}} zł</span>
