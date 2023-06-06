@@ -3,30 +3,37 @@
         <img src="assets/x-icon.png" alt="Ikona X" class="close-icon" />
     </button>
     <div class="content-wrapper">
-        <form class="adding-form">
+        <form class="adding-form" (ngSubmit)="onSubmit(addingForm)" #addingForm="ngForm">
             <h1 class="form-header">Dodawanie produktu</h1>
-            <label class="form-label">
+            <label class="form-label"
+                [ngStyle]="{'--colorOverride': productModel.invalid && (productModel.dirty || productModel.touched) ? 'red' : null}">
                 <div class="label-headers">
                     <span>Nazwa produktu</span>
-                    <span class="label-required">Pole wymagane</span>
+                    <span class="label-required">Pole
+                        wymagane</span>
                 </div>
-                <input class="label-input" />
+                <input class="label-input" type="text" [(ngModel)]="productName" name="productName" required
+                    maxlength="40" #productModel="ngModel" />
             </label>
-            <label class="form-label">
+            <label class="form-label"
+                [ngStyle]="{'--colorOverride': priceModel.invalid && (priceModel.dirty || priceModel.touched) ? 'red' : null}">
                 <div class="label-headers">
                     <span>Cena produktu</span>
                     <span class="label-required">Pole wymagane</span>
                 </div>
-                <input class="label-input" />
+                <input class="label-input" type="number" [(ngModel)]="productPrice" name="productPrice" required min="0"
+                    step="0.01" #priceModel="ngModel" />
             </label>
-            <label class="form-label">
+            <label class="form-label"
+                [ngStyle]="{'--colorOverride': !(fileInput.files && fileInput.files[0]) && isInputTouched ? 'red' : null}">
                 <div class="label-headers">
-                    <span>Nazwa produktu</span>
+                    <span>Zdjęcie produktu</span>
                     <span class="label-required">Pole wymagane</span>
                 </div>
-                <input class="label-input" />
+                <input class="label-input" type="file" (change)="imgUpload($event)" name="productImage" accept="image/*"
+                    #fileInput (click)="inputTouched()" />
             </label>
-            <app-styled-btn>
+            <app-styled-btn btnType="submit" class="styled-btn">
                 Dodaj produkt
             </app-styled-btn>
         </form>

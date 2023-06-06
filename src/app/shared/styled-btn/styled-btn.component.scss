@@ -4,9 +4,9 @@
     border: 0;
 
     font-weight: 700;
-    font-size: 1.125em;
+    font-size: calc(1.125em * var(--sizeScale));
     line-height: 156%;
     letter-spacing: -0.02em;
 
-    padding: 0.75em 1.25em;
+    padding: calc(0.75em * var(--sizeScale)) calc(1.25em * var(--sizeScale));
 }

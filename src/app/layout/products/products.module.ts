@@ -6,6 +6,7 @@ import { ContentComponent } from './components/content/content.component';
 import { ProductsService } from '../../../app/services/products/products.service';
 import { AddingFormComponent } from './components/adding-form/adding-form.component';
 import { StyledBtnComponent } from '../../../app/shared/styled-btn/styled-btn.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -18,7 +19,8 @@ import { StyledBtnComponent } from '../../../app/shared/styled-btn/styled-btn.co
     StyledBtnComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [
     ProductsComponent

@@ -1,5 +1,5 @@
 .adding-form-wrapper {
-    position: absolute;
+    position: fixed;
 
     top: 0;
     right: 0;
@@ -49,7 +49,7 @@
 
             .form-header {
                 font-weight: 700;
-                font-size: 2em;
+                font-size: 2rem;
                 line-height: 88%;
 
                 margin-bottom: 1.25em;
@@ -66,13 +66,15 @@
                     margin-bottom: 6px;
 
                     font-weight: 400;
-                    font-size: 1em;
+                    font-size: 1rem;
                     line-height: 150%;
                     letter-spacing: -0.02em;
 
+                    color: var(--colorOverride, black);
+
                     .label-required {
-                        font-size: 0.875em;
-                        color: #A5A5A5;
+                        font-size: 0.875rem;
+                        color: var(--colorOverride, #A5A5A5);
                     }
                 }
 
@@ -80,8 +82,12 @@
                     width: inherit;
                     height: 3.5rem;
 
-                    border: 1.5px solid #888888;
+                    border: 1.5px solid var(--colorOverride, #888888);
                     border-radius: 1px;
+
+                    padding: 0.5rem;
+
+                    font-size: 1.1rem;
                 }
             }
 
@@ -95,4 +101,14 @@
 
 .hidden {
     transform: translate(100%, 0%);
+}
+
+.styled-btn {
+    --sizeScale: 1.5;
+}
+
+@media only screen and (min-width: 768px) {
+    .styled-btn {
+        --sizeScale: 1;
+    }
 }
