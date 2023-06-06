@@ -1,0 +1,34 @@
+<div [ngClass]="(shouldOpenForm$ | async) ? 'shown' : 'hidden'" class="adding-form-wrapper">
+    <button class="close-form-button" (click)="closeForm()">
+        <img src="assets/x-icon.png" alt="Ikona X" class="close-icon" />
+    </button>
+    <div class="content-wrapper">
+        <form class="adding-form">
+            <h1 class="form-header">Dodawanie produktu</h1>
+            <label class="form-label">
+                <div class="label-headers">
+                    <span>Nazwa produktu</span>
+                    <span class="label-required">Pole wymagane</span>
+                </div>
+                <input class="label-input" />
+            </label>
+            <label class="form-label">
+                <div class="label-headers">
+                    <span>Cena produktu</span>
+                    <span class="label-required">Pole wymagane</span>
+                </div>
+                <input class="label-input" />
+            </label>
+            <label class="form-label">
+                <div class="label-headers">
+                    <span>Nazwa produktu</span>
+                    <span class="label-required">Pole wymagane</span>
+                </div>
+                <input class="label-input" />
+            </label>
+            <button type="submit">
+                Dodaj produkt
+            </button>
+        </form>
+    </div>
+</div>

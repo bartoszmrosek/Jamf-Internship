@@ -12,15 +12,19 @@
 
         letter-spacing: -0.02em;
 
-        width: 90%;
+        width: 20ch;
 
         text-align: left;
     }
 
     .products-description {
-        width: 65%;
-        margin-top: 6.5em;
+        width: 48ch;
+        margin-top: 6em;
         padding: 1.5rem 0;
+
+        @media only screen and (min-width: 1600px) {
+            margin-top: 10em;
+        }
 
         .products-summary {
             font-weight: 400;
