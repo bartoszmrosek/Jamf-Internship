@@ -1,5 +1,6 @@
-<div [ngClass]="(shouldOpenForm$ | async) ? 'shown' : 'hidden'" class="adding-form-wrapper">
-    <button class="close-form-button" (click)="closeForm()">
+<div [ngClass]="(shouldOpenForm$ | async) ? 'shown' : 'hidden'" class="adding-form-wrapper"
+    [ariaHidden]="(shouldOpenForm$ | async) === false" aria-live="polite">
+    <button class=" close-form-button" (click)="closeForm()" [tabIndex]="(shouldOpenForm$ | async) ? 0 : -1">
         <img src="assets/x-icon.png" alt="Ikona X" class="close-icon" />
     </button>
     <div class="content-wrapper">
@@ -13,7 +14,7 @@
                         wymagane</span>
                 </div>
                 <input class="label-input" type="text" [(ngModel)]="productName" name="productName" required
-                    maxlength="40" #productModel="ngModel" />
+                    maxlength="40" #productModel="ngModel" [tabIndex]="(shouldOpenForm$ | async) ? 0 : -1" />
             </label>
             <label class="form-label"
                 [ngStyle]="{'--colorOverride': priceModel.invalid && (priceModel.dirty || priceModel.touched) ? 'red' : null}">
@@ -22,7 +23,7 @@
                     <span class="label-required">Pole wymagane</span>
                 </div>
                 <input class="label-input" type="number" [(ngModel)]="productPrice" name="productPrice" required min="0"
-                    step="0.01" #priceModel="ngModel" />
+                    step="0.01" #priceModel="ngModel" [tabIndex]="(shouldOpenForm$ | async) ? 0 : -1" />
             </label>
             <label class="form-label"
                 [ngStyle]="{'--colorOverride': !(fileInput.files && fileInput.files[0]) && isInputTouched ? 'red' : null}">
@@ -31,9 +32,9 @@
                     <span class="label-required">Pole wymagane</span>
                 </div>
                 <input class="label-input" type="file" (change)="imgUpload($event)" name="productImage" accept="image/*"
-                    #fileInput (click)="inputTouched()" />
+                    #fileInput (click)="inputTouched()" [tabIndex]="(shouldOpenForm$ | async) ? 0 : -1" />
             </label>
-            <app-styled-btn btnType="submit" class="styled-btn">
+            <app-styled-btn btnType="submit" class="styled-btn" [tabIndexNum]="(shouldOpenForm$ | async) ? 0 : -1">
                 Dodaj produkt
             </app-styled-btn>
         </form>

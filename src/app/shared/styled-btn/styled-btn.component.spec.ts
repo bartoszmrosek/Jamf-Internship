@@ -8,7 +8,8 @@ describe('StyledBtnComponent', () => {
   beforeEach(async ()=>{
     await render(StyledBtnComponent, {
       componentInputs: {
-        btnType: BTN_TYPE
+        btnType: BTN_TYPE,
+        tabIndexNum: 2
       },
       componentOutputs:{
         clickEvent: {
@@ -23,5 +24,8 @@ describe('StyledBtnComponent', () => {
   })
   it("should set proper type based on input", ()=>{
     expect(screen.getByRole("button")).toHaveProperty("type", BTN_TYPE)
+  })
+  it("should` set proper tabIndex based on input", ()=>{
+    expect(screen.getByRole("button")).toHaveProperty("tabIndex", 2);
   })
 });

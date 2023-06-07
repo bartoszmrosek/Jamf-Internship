@@ -34,7 +34,7 @@ describe('ContentComponent', () => {
     const image = screen.getByAltText(INITIAL_PRODUCTS[0].alt as string);
     expect(image).toBeInTheDocument();
   })
-  it("should display image with generic alt", ()=>{
+  it("should display images with generic alts", ()=>{
     const images = screen.getAllByAltText("Zdjęcie poglądowe produktu");
     expect(images).toHaveLength(3);
   })

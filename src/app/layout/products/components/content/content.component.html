@@ -15,7 +15,7 @@
         <h3 class="devices-header">
             Urządzenia Apple
         </h3>
-        <div class="devices-grid">
+        <div class="devices-grid" aria-live="polite">
             <section *ngFor="let product of products$ | async" class="devices-grid-item" data-testid="products-section">
                 <img [src]="product.imageUrl" [alt]="product.alt ?? 'Zdjęcie poglądowe produktu'"
                     class="devices-image" />
