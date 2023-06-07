@@ -71,6 +71,11 @@ describe("AddingForm", ()=>{
             compoonentFixture = fixture;
         })
 
+        it("should fire callback on X button", ()=>{
+            fireEvent.click(screen.getByLabelText("Close form"));
+            expect(stopFormMock).toHaveBeenCalledTimes(1);
+        })
+        
         describe("ARIA and visibility tests", ()=>{
             it("should be visible to screen readers", ()=>{
                 expect(screen.getByTestId("adding-form")).toHaveAttribute("aria-hidden", "false");

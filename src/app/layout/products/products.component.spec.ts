@@ -30,6 +30,17 @@ describe("ProductsComponent", ()=>{
     })
 
     // Integration of components and services
+    it("should open form from content section", ()=>{
+        fireEvent.click(screen.getByRole("button", {name: "Dodaj nowy produkt"}));
+        expect(screen.getByTestId("adding-form")).toHaveAttribute("aria-hidden", "false");
+    });
+
+    it("should close form on X button in form", ()=>{
+        fireEvent.click(screen.getByRole("button", {name: "Dodaj nowy produkt"}));
+        fireEvent.click(screen.getByLabelText("Close form"));
+        expect(screen.getByTestId("adding-form")).toHaveAttribute("aria-hidden", "true");
+    })
+
     it("should add product to devices grid on success form submit", async ()=>{
         const textInput = screen.getByRole("textbox", {hidden: true});
         const numberInput = screen.getByRole("spinbutton", {hidden: true});
