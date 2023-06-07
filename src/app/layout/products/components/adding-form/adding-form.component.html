@@ -1,5 +1,5 @@
 <div [ngClass]="(shouldOpenForm$ | async) ? 'shown' : 'hidden'" class="adding-form-wrapper"
-    [ariaHidden]="(shouldOpenForm$ | async) === false" aria-live="polite">
+    [attr.aria-hidden]="(shouldOpenForm$ | async) === false" aria-live="polite" data-testid="adding-form">
     <button class=" close-form-button" (click)="closeForm()" [tabIndex]="(shouldOpenForm$ | async) ? 0 : -1">
         <img src="assets/x-icon.png" alt="Ikona X" class="close-icon" />
     </button>
@@ -32,7 +32,8 @@
                     <span class="label-required">Pole wymagane</span>
                 </div>
                 <input class="label-input" type="file" (change)="imgUpload($event)" name="productImage" accept="image/*"
-                    #fileInput (click)="inputTouched()" [tabIndex]="(shouldOpenForm$ | async) ? 0 : -1" />
+                    #fileInput (click)="inputTouched()" [tabIndex]="(shouldOpenForm$ | async) ? 0 : -1"
+                    data-testid="input-file" />
             </label>
             <app-styled-btn btnType="submit" class="styled-btn" [tabIndexNum]="(shouldOpenForm$ | async) ? 0 : -1">
                 Dodaj produkt

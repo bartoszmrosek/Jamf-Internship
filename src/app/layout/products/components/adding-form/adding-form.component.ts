@@ -35,7 +35,7 @@ export class AddingFormComponent {
   }
 
   public onSubmit(form: NgForm){
-    if(form.valid){
+    if(form.valid && this.productImageUrl){
       this.productsService.addProduct({
         name: this.productName,
         price: this.productPrice,
